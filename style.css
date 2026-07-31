@@ -197,6 +197,10 @@ h1,h2,h3,h4{ font-family:var(--ff-display); font-weight:700; letter-spacing:-.02
 }
 .work-card:hover{ transform:scale(1.02); }
 .work-card.big{ grid-column:span 2; }
+.work-card.photo{
+  background-image:linear-gradient(to top, rgba(10,10,10,.85), rgba(10,10,10,.15) 55%, rgba(10,10,10,.35)), var(--photo);
+  background-size:cover; background-position:var(--pos, center);
+}
 .work-tag{
   align-self:flex-start; font-size:11px; letter-spacing:.1em; text-transform:uppercase; font-weight:700;
   color:var(--gold); background:rgba(10,10,10,.5); padding:6px 12px; border-radius:999px; margin-bottom:auto;
