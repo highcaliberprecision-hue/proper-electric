@@ -53,6 +53,29 @@ const countIO = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 counters.forEach(el => countIO.observe(el));
 
+// ---------- gallery lightbox ----------
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCaption.textContent = item.dataset.caption || '';
+      lightbox.classList.add('open');
+    });
+  });
+
+  function closeLightbox() { lightbox.classList.remove('open'); }
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+}
+
 // ---------- FAQ accordion ----------
 document.querySelectorAll('.faq-item').forEach(item => {
   const q = item.querySelector('.faq-q');

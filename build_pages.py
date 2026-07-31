@@ -62,6 +62,7 @@ def nav(css_path):
     <nav class="nav-links">
       <a href="{css_path}index.html#services">services</a>
       <a href="{css_path}index.html#work">work</a>
+      <a href="{css_path}index.html#gallery">gallery</a>
       <a href="{css_path}index.html#about">about</a>
       <a href="{css_path}faq.html">faq</a>
       <a href="{css_path}service-areas.html">areas</a>
@@ -75,6 +76,7 @@ def nav(css_path):
   <div class="nav-mobile" id="navMobile">
     <a href="{css_path}index.html#services">services</a>
     <a href="{css_path}index.html#work">work</a>
+    <a href="{css_path}index.html#gallery">gallery</a>
     <a href="{css_path}index.html#about">about</a>
     <a href="{css_path}faq.html">faq</a>
     <a href="{css_path}service-areas.html">areas</a>
