@@ -211,19 +211,19 @@ if (form && note) {
   });
 }
 
-// ---------- hero title reveal ----------
-window.addEventListener('load', () => {
-  const lines = document.querySelectorAll('.hero-title .reveal');
-  if (!lines.length || reduceMotion) return;
-  lines.forEach((line, i) => {
-    line.style.transform = 'translateY(110%)';
-    line.style.opacity = '0';
-    line.style.transition = 'transform .9s cubic-bezier(.16,1,.3,1) ' + (0.15 + i * 0.12) + 's, opacity .9s ' + (0.15 + i * 0.12) + 's';
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        line.style.transform = 'translateY(0)';
-        line.style.opacity = '1';
-      });
-    });
-  });
-});
+// ---------- hero parallax ----------
+const hero = document.getElementById('top');
+if (hero && hero.classList.contains('hero') && !reduceMotion) {
+  let ticking = false;
+  const apply = () => {
+    const r = hero.getBoundingClientRect();
+    const p = Math.min(Math.max(-r.top / (r.height || 1), 0), 1);
+    hero.style.setProperty('--p', p.toFixed(4));
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+  }, { passive: true });
+  window.addEventListener('resize', apply, { passive: true });
+  apply();
+}

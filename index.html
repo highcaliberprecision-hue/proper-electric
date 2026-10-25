@@ -8,7 +8,7 @@
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://theproperelectric.com/" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2220%22>⚡</text></svg>" />
-<meta name="theme-color" content="#0a0a0a" />
+<meta name="theme-color" content="#f5f5f7" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Proper Electric" />
@@ -171,64 +171,32 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-bg">
-    <svg class="skyline" viewBox="0 0 1600 500" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="skyFade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#e5a930" stop-opacity=".55"/>
-          <stop offset="100%" stop-color="#e5a930" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      <g fill="#141414">
-        <rect x="0" y="260" width="60" height="240"/>
-        <rect x="70" y="200" width="45" height="300"/>
-        <rect x="125" y="300" width="70" height="200"/>
-        <rect x="205" y="150" width="55" height="350"/>
-        <rect x="270" y="230" width="40" height="270"/>
-        <rect x="320" y="120" width="65" height="380"/>
-        <rect x="395" y="260" width="50" height="240"/>
-        <rect x="455" y="180" width="60" height="320"/>
-        <rect x="525" y="90" width="70" height="410"/>
-        <rect x="605" y="220" width="45" height="280"/>
-        <rect x="660" y="160" width="55" height="340"/>
-        <rect x="725" y="40" width="80" height="460" id="tower"/>
-        <rect x="815" y="200" width="50" height="300"/>
-        <rect x="875" y="270" width="60" height="230"/>
-        <rect x="945" y="140" width="45" height="360"/>
-        <rect x="1000" y="230" width="70" height="270"/>
-        <rect x="1080" y="180" width="50" height="320"/>
-        <rect x="1140" y="280" width="65" height="220"/>
-        <rect x="1215" y="110" width="55" height="390"/>
-        <rect x="1280" y="240" width="45" height="260"/>
-        <rect x="1335" y="190" width="60" height="310"/>
-        <rect x="1405" y="270" width="50" height="230"/>
-        <rect x="1465" y="150" width="65" height="350"/>
-        <rect x="1540" y="240" width="60" height="260"/>
-      </g>
-      <rect x="1215" y="110" width="55" height="390" fill="url(#skyFade)"/>
-      <polyline class="bolt" points="1245,110 1225,280 1255,280 1230,500" fill="none" stroke="#e5a930" stroke-width="3" stroke-linejoin="round" opacity=".75"/>
-    </svg>
-    <div class="hero-glow"></div>
-    <div class="hero-grid"></div>
+  <div class="l-base"></div>
+  <div class="l-glow" aria-hidden="true"><img src="assets/glow.webp" alt="" /></div>
+  <div class="l-bulb">
+    <img src="assets/hero-1600.webp"
+         srcset="assets/hero-900.webp 900w, assets/hero-1600.webp 1600w"
+         sizes="(max-width:920px) 90vw, 46vw"
+         width="1600" height="900" fetchpriority="high"
+         alt="Lit filament bulb with electricity arcing inside the glass" />
   </div>
 
   <div class="hero-content">
-    <p class="eyebrow"><span class="dot"></span>chicago · licensed · insured</p>
-    <h1 class="hero-title">
-      <span class="reveal">we power</span>
-      <span class="reveal">what&rsquo;s <em>next</em></span>
-    </h1>
-    <p class="hero-sub">Smart homes. EV charging. Future-ready power — installed by a family-run Chicago crew that treats your home like their own.</p>
+    <p class="eyebrow"><span class="dot"></span>chicago &middot; licensed &middot; insured</p>
+    <h1 class="hero-title">we power<br>what&rsquo;s <em>next</em></h1>
+    <p class="hero-sub">Smart homes. EV charging. Future-ready power &mdash; installed by a family-run Chicago crew that treats your home like their own.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn-solid lg">schedule installation <span class="arrow">→</span></a>
-      <a href="tel:8477444625" class="btn-outline lg"><span class="ico">☎</span> (847) 744-4625</a>
+      <a href="#contact" class="btn-solid lg">schedule installation <span class="arrow">&rarr;</span></a>
+      <a href="tel:8477444625" class="btn-outline lg"><span class="ico">&#9742;</span> (847) 744-4625</a>
+    </div>
+    <div class="hero-trust">
+      <span><i></i>1,200+ installs</span>
+      <span><i></i>same-day quotes</span>
+      <span><i></i>permitted &amp; inspected</span>
     </div>
   </div>
 
-  <div class="scroll-cue">
-    <span>scroll</span>
-    <div class="scroll-line"></div>
-  </div>
+  <div class="scroll-cue"><span class="scroll-line"></span>scroll</div>
 </section>
 
 <!-- MARQUEE -->
@@ -330,15 +298,15 @@
       <span class="work-tag">EV install</span>
       <h4>ready for fast charging</h4>
     </div>
-    <div class="work-card reveal-up" style="--from:#1c2436; --to:#0a0a0a; --glyph:'\25C8';">
+    <div class="work-card reveal-up" style="--from:#243049; --to:#121722; --glyph:'\25C8';">
       <span class="work-tag">smart home</span>
       <h4>whole house controlled by Alexa</h4>
     </div>
-    <div class="work-card reveal-up" style="--from:#2b1414; --to:#0a0a0a; --glyph:'\25B2';">
+    <div class="work-card reveal-up" style="--from:#3a1c1c; --to:#1a1010; --glyph:'\25B2';">
       <span class="work-tag">commercial</span>
       <h4>powered up after dark</h4>
     </div>
-    <div class="work-card big reveal-up" style="--from:#132a20; --to:#0a0a0a; --glyph:'\25A3';">
+    <div class="work-card big reveal-up" style="--from:#17382a; --to:#0f1d16; --glyph:'\25A3';">
       <span class="work-tag">panel upgrade</span>
       <h4>200A service, future-ready</h4>
     </div>
