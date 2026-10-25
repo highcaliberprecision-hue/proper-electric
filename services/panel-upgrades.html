@@ -48,6 +48,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <div class="grain"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 <header class="nav" id="nav">
@@ -68,7 +69,7 @@
       <a href="tel:8477444625" class="btn-ghost"><span class="ico">☎</span> call</a>
       <a href="../index.html#contact" class="btn-solid">get quote</a>
     </div>
-    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-mobile" id="navMobile">
     <a href="../index.html#services">services</a>
@@ -84,7 +85,7 @@
 <section class="section" id="top" style="padding-top:180px;">
   <div class="section-head reveal-up">
     <p class="kicker">panel upgrades</p>
-    <h2>200a+ panel<br>upgrades.</h2>
+    <h1 class="page-title">200a+ panel<br>upgrades.</h1>
     <p class="section-desc">Old fuse box, breakers that keep tripping, or adding an EV charger, hot tub, or solar — a modern 200A+ panel is the foundation everything else depends on.</p>
     <div class="hero-cta" style="margin-top:32px;">
       <a href="../index.html#contact" class="btn-solid lg">get a quote <span class="arrow">→</span></a>
@@ -98,13 +99,13 @@
     <p class="kicker">what's included</p>
     <h2>every install,<br>done right.</h2>
   </div>
-  <ul class="area-tags reveal-up" style="display:block; columns:2; max-width:700px;">
-    <li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Full panel replacement (fuse box or undersized breaker panel)</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; 100A → 200A+ service upgrades</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Meter socket and service entrance work (coordinated with ComEd)</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Whole-home surge protection</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Permit filing and village/city inspection</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Grounding and bonding brought up to current code</li>
+  <ul class="check-list reveal-up">
+    <li>Full panel replacement (fuse box or undersized breaker panel)</li>
+<li>100A → 200A+ service upgrades</li>
+<li>Meter socket and service entrance work (coordinated with ComEd)</li>
+<li>Whole-home surge protection</li>
+<li>Permit filing and village/city inspection</li>
+<li>Grounding and bonding brought up to current code</li>
   </ul>
 </section>
 
@@ -122,20 +123,20 @@
   </div>
   <div class="faq-list reveal-up">
     <div class="faq-item">
-      <button class="faq-q">How do I know if I need a panel upgrade?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Common signs: breakers that trip under normal use, a fuse box instead of breakers, adding an EV charger/hot tub/solar, or an insurance company flagging an old panel (Federal Pacific, Zinsco). We'll give you a straight answer during the free quote.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">How do I know if I need a panel upgrade?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-1" role="region"><p>Common signs: breakers that trip under normal use, a fuse box instead of breakers, adding an EV charger/hot tub/solar, or an insurance company flagging an old panel (Federal Pacific, Zinsco). We'll give you a straight answer during the free quote.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">How long does a panel upgrade take?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Most residential panel upgrades are done in a single day, though the ComEd-coordinated outage means we schedule it in advance rather than same-day.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">How long does a panel upgrade take?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-2" role="region"><p>Most residential panel upgrades are done in a single day, though the ComEd-coordinated outage means we schedule it in advance rather than same-day.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Will I be without power during the upgrade?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes, for a portion of the day — typically a few hours during the actual swap. We schedule around your availability.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">Will I be without power during the upgrade?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-3" role="region"><p>Yes, for a portion of the day — typically a few hours during the actual swap. We schedule around your availability.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Do I need a permit for a panel upgrade?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes, always — we file it and coordinate the inspection as part of every panel upgrade.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">Do I need a permit for a panel upgrade?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-4" role="region"><p>Yes, always — we file it and coordinate the inspection as part of every panel upgrade.</p></div>
     </div>
   </div>
 </section>
@@ -170,18 +171,18 @@
     <div class="footer-col">
       <h5>visit</h5>
       <span>Chicago, IL</span>
-      <span>Lic. # IL-EC-00000</span>
+      <span>Licensed &middot; Bonded &middot; Insured</span>
     </div>
     <div class="footer-col">
-      <h5>legal</h5>
-      <a href="../index.html">Privacy</a>
-      <a href="../index.html">Terms</a>
-      <a href="../index.html">Accessibility</a>
+      <h5>service</h5>
+      <a href="../services/ev-charger-installation.html">EV chargers</a>
+      <a href="../services/panel-upgrades.html">Panel upgrades</a>
+      <a href="../faq.html">FAQ</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Proper Electric. All rights reserved.</span>
-    <span>Licensed · Bonded · Insured · IL-EC-00000 · Chicago, IL</span>
+    <span>Licensed · Bonded · Insured · Chicago, IL</span>
   </div>
 </footer>
 <script src="../script.js"></script>

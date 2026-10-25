@@ -48,6 +48,7 @@ HEAD_TEMPLATE = """<!DOCTYPE html>
 {jsonld}
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <div class="grain"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 """
@@ -71,7 +72,7 @@ def nav(css_path):
       <a href="tel:{PHONE_TEL}" class="btn-ghost"><span class="ico">☎</span> call</a>
       <a href="{css_path}index.html#contact" class="btn-solid">get quote</a>
     </div>
-    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-mobile" id="navMobile">
     <a href="{css_path}index.html#services">services</a>
@@ -100,18 +101,18 @@ def footer(css_path):
     <div class="footer-col">
       <h5>visit</h5>
       <span>Chicago, IL</span>
-      <span>Lic. # IL-EC-00000</span>
+      <span>Licensed &middot; Bonded &middot; Insured</span>
     </div>
     <div class="footer-col">
-      <h5>legal</h5>
-      <a href="{css_path}index.html">Privacy</a>
-      <a href="{css_path}index.html">Terms</a>
-      <a href="{css_path}index.html">Accessibility</a>
+      <h5>service</h5>
+      <a href="{css_path}services/ev-charger-installation.html">EV chargers</a>
+      <a href="{css_path}services/panel-upgrades.html">Panel upgrades</a>
+      <a href="{css_path}faq.html">FAQ</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Proper Electric. All rights reserved.</span>
-    <span>Licensed · Bonded · Insured · IL-EC-00000 · Chicago, IL</span>
+    <span>Licensed · Bonded · Insured · Chicago, IL</span>
   </div>
 </footer>
 <script src="{css_path}script.js"></script>
@@ -123,7 +124,7 @@ SERVICE_HERO = """
 <section class="section" id="top" style="padding-top:180px;">
   <div class="section-head reveal-up">
     <p class="kicker">{kicker}</p>
-    <h2>{h1}</h2>
+    <h1 class="page-title">{h1}</h1>
     <p class="section-desc">{intro}</p>
     <div class="hero-cta" style="margin-top:32px;">
       <a href="{home}#contact" class="btn-solid lg">get a quote <span class="arrow">→</span></a>
@@ -134,17 +135,17 @@ SERVICE_HERO = """
 """
 
 def service_body(includes, process, faqs, related, home):
-    includes_html = "\n".join(f'<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; {i}</li>' for i in includes)
+    includes_html = "\n".join(f'<li>{i}</li>' for i in includes)
     process_html = "\n".join(
         f'<div class="pillar reveal-up"><span class="pillar-num">{idx:02d}</span><h3>{step["title"]}</h3><p>{step["body"]}</p></div>'
         for idx, step in enumerate(process, 1)
     )
     faq_html = "\n".join(
         f'''<div class="faq-item">
-      <button class="faq-q">{q}<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>{a}</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-{n}">{q}<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-{n}" role="region"><p>{a}</p></div>
     </div>'''
-        for q, a in faqs
+        for n, (q, a) in enumerate(faqs, 1)
     )
     related_html = "\n".join(
         f'<a href="{slug}.html" class="btn-outline" style="margin-right:12px;margin-bottom:12px;">{name}</a>'
@@ -156,7 +157,7 @@ def service_body(includes, process, faqs, related, home):
     <p class="kicker">what's included</p>
     <h2>every install,<br>done right.</h2>
   </div>
-  <ul class="area-tags reveal-up" style="display:block; columns:2; max-width:700px;">
+  <ul class="check-list reveal-up">
     {includes_html}
   </ul>
 </section>
@@ -423,13 +424,13 @@ def build_faq_page():
         ("How much does EV charger installation cost in Chicago?", "Most Level 2 installs run $600–$1,800 depending on panel capacity and run length — we give you an exact number on-site, free, before any work starts."),
         ("Do I qualify for rebates in Illinois?", "Most homeowners qualify for at least one of the federal, state, or ComEd programs. We check your eligibility as part of every quote."),
         ("How long does installation take?", "A standard EV charger or lighting install is typically done in a single visit. Panel upgrades and whole-home rewires are scheduled and scoped up front."),
-        ("Are you licensed and insured?", "Yes — fully licensed, bonded, and insured in Illinois (Lic. # IL-EC-00000), with every job permitted and inspected."),
+        ("Are you licensed and insured?", "Yes — fully licensed, bonded, and insured in Illinois, with every job permitted and inspected."),
     ] + FAQ_EXTRA
 
     faq_items = "\n".join(f'''<div class="faq-item">
-      <button class="faq-q">{q}<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>{a}</p></div>
-    </div>''' for q, a in all_faqs)
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-{n}">{q}<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-{n}" role="region"><p>{a}</p></div>
+    </div>''' for n, (q, a) in enumerate(all_faqs, 1))
 
     faq_schema = {
         "@context": "https://schema.org",
@@ -448,7 +449,7 @@ def build_faq_page():
 <section class="section faq" id="faq" style="padding-top:180px;">
   <div class="section-head reveal-up">
     <p class="kicker">faq</p>
-    <h2>straight answers.<br>no upsells.</h2>
+    <h1 class="page-title">straight answers.<br>no upsells.</h1>
     <p class="section-desc">Everything customers ask us most, from EV rebates to permits and emergency service. Don't see your question — just call.</p>
   </div>
   <div class="faq-list reveal-up">
@@ -493,7 +494,7 @@ def build_service_areas_page():
 <section class="section" id="top" style="padding-top:180px;">
   <div class="section-head reveal-up">
     <p class="kicker">service area</p>
-    <h2>serving chicago<br>&amp; surrounding areas.</h2>
+    <h1 class="page-title">serving chicago<br>&amp; surrounding areas.</h1>
     <p class="section-desc">Same-day estimates across Cook, DuPage and Lake counties. If you're not sure we cover your zip — just call.</p>
   </div>
   <div class="area-tags reveal-up">

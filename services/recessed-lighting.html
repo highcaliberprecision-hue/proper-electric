@@ -48,6 +48,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <div class="grain"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 <header class="nav" id="nav">
@@ -68,7 +69,7 @@
       <a href="tel:8477444625" class="btn-ghost"><span class="ico">☎</span> call</a>
       <a href="../index.html#contact" class="btn-solid">get quote</a>
     </div>
-    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-mobile" id="navMobile">
     <a href="../index.html#services">services</a>
@@ -84,7 +85,7 @@
 <section class="section" id="top" style="padding-top:180px;">
   <div class="section-head reveal-up">
     <p class="kicker">architectural lighting</p>
-    <h2>recessed & designer<br>lighting.</h2>
+    <h1 class="page-title">recessed & designer<br>lighting.</h1>
     <p class="section-desc">Architectural lighting design that actually elevates a room — recessed cans, layered lighting layouts, and dimming, planned before a single hole gets cut.</p>
     <div class="hero-cta" style="margin-top:32px;">
       <a href="../index.html#contact" class="btn-solid lg">get a quote <span class="arrow">→</span></a>
@@ -98,13 +99,13 @@
     <p class="kicker">what's included</p>
     <h2>every install,<br>done right.</h2>
   </div>
-  <ul class="area-tags reveal-up" style="display:block; columns:2; max-width:700px;">
-    <li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Lighting layout design (spacing, layering, sightlines)</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Recessed can installation (new construction & retrofit)</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; LED retrofit of existing incandescent fixtures</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Dimmer and smart-dimmer wiring</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Under-cabinet & accent lighting</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Ceiling patch coordination for retrofit installs</li>
+  <ul class="check-list reveal-up">
+    <li>Lighting layout design (spacing, layering, sightlines)</li>
+<li>Recessed can installation (new construction & retrofit)</li>
+<li>LED retrofit of existing incandescent fixtures</li>
+<li>Dimmer and smart-dimmer wiring</li>
+<li>Under-cabinet & accent lighting</li>
+<li>Ceiling patch coordination for retrofit installs</li>
   </ul>
 </section>
 
@@ -122,20 +123,20 @@
   </div>
   <div class="faq-list reveal-up">
     <div class="faq-item">
-      <button class="faq-q">Can you add recessed lighting without tearing up my ceiling?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>In most retrofit jobs, yes — modern recessed housings install through a cut hole from below with minimal patching, no full ceiling demo required.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">Can you add recessed lighting without tearing up my ceiling?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-1" role="region"><p>In most retrofit jobs, yes — modern recessed housings install through a cut hole from below with minimal patching, no full ceiling demo required.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">How many recessed lights do I need for a room?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>It depends on ceiling height, room use, and whether you're layering with other fixtures — we spec this during the free design walkthrough, not with a generic formula.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">How many recessed lights do I need for a room?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-2" role="region"><p>It depends on ceiling height, room use, and whether you're layering with other fixtures — we spec this during the free design walkthrough, not with a generic formula.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Do you install dimmers with every recessed lighting job?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes, dimming is standard on our recessed lighting installs unless you tell us otherwise.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">Do you install dimmers with every recessed lighting job?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-3" role="region"><p>Yes, dimming is standard on our recessed lighting installs unless you tell us otherwise.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Can this be added to a room with existing smart home lighting?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes — we'll wire it to match whatever system (Lutron, Alexa, Google) is already running your home.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">Can this be added to a room with existing smart home lighting?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-4" role="region"><p>Yes — we'll wire it to match whatever system (Lutron, Alexa, Google) is already running your home.</p></div>
     </div>
   </div>
 </section>
@@ -170,18 +171,18 @@
     <div class="footer-col">
       <h5>visit</h5>
       <span>Chicago, IL</span>
-      <span>Lic. # IL-EC-00000</span>
+      <span>Licensed &middot; Bonded &middot; Insured</span>
     </div>
     <div class="footer-col">
-      <h5>legal</h5>
-      <a href="../index.html">Privacy</a>
-      <a href="../index.html">Terms</a>
-      <a href="../index.html">Accessibility</a>
+      <h5>service</h5>
+      <a href="../services/ev-charger-installation.html">EV chargers</a>
+      <a href="../services/panel-upgrades.html">Panel upgrades</a>
+      <a href="../faq.html">FAQ</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Proper Electric. All rights reserved.</span>
-    <span>Licensed · Bonded · Insured · IL-EC-00000 · Chicago, IL</span>
+    <span>Licensed · Bonded · Insured · Chicago, IL</span>
   </div>
 </footer>
 <script src="../script.js"></script>

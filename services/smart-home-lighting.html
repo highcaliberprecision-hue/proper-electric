@@ -48,6 +48,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <div class="grain"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 <header class="nav" id="nav">
@@ -68,7 +69,7 @@
       <a href="tel:8477444625" class="btn-ghost"><span class="ico">☎</span> call</a>
       <a href="../index.html#contact" class="btn-solid">get quote</a>
     </div>
-    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-mobile" id="navMobile">
     <a href="../index.html#services">services</a>
@@ -84,7 +85,7 @@
 <section class="section" id="top" style="padding-top:180px;">
   <div class="section-head reveal-up">
     <p class="kicker">smart home</p>
-    <h2>whole-home smart<br>lighting control.</h2>
+    <h1 class="page-title">whole-home smart<br>lighting control.</h1>
     <p class="section-desc">Alexa, Google Home, or Lutron — we wire your home for whole-house lighting control, scenes, and scheduling, whether you're retrofitting an existing house or wiring new construction.</p>
     <div class="hero-cta" style="margin-top:32px;">
       <a href="../index.html#contact" class="btn-solid lg">get a quote <span class="arrow">→</span></a>
@@ -98,13 +99,13 @@
     <p class="kicker">what's included</p>
     <h2>every install,<br>done right.</h2>
   </div>
-  <ul class="area-tags reveal-up" style="display:block; columns:2; max-width:700px;">
-    <li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Smart switch & dimmer installation (existing wiring)</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Lutron Caséta / RA3 whole-home systems</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Alexa & Google Home integration and scene setup</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Three-way and four-way smart switch wiring</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Low-voltage wiring for new construction & remodels</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; App setup, scheduling, and one-on-one walkthrough</li>
+  <ul class="check-list reveal-up">
+    <li>Smart switch & dimmer installation (existing wiring)</li>
+<li>Lutron Caséta / RA3 whole-home systems</li>
+<li>Alexa & Google Home integration and scene setup</li>
+<li>Three-way and four-way smart switch wiring</li>
+<li>Low-voltage wiring for new construction & remodels</li>
+<li>App setup, scheduling, and one-on-one walkthrough</li>
   </ul>
 </section>
 
@@ -122,20 +123,20 @@
   </div>
   <div class="faq-list reveal-up">
     <div class="faq-item">
-      <button class="faq-q">Do smart switches work in older homes without a neutral wire?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Sometimes — some smart switches work without a neutral, but for reliability we usually recommend pulling a neutral where it's missing. We check this during the quote.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">Do smart switches work in older homes without a neutral wire?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-1" role="region"><p>Sometimes — some smart switches work without a neutral, but for reliability we usually recommend pulling a neutral where it's missing. We check this during the quote.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Alexa, Google, or Lutron — which should I pick?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Lutron Caséta/RA3 is the most reliable for whole-home dimming and doesn't depend on Wi-Fi to function locally. Alexa/Google smart switches are more budget-friendly and great for single rooms. We'll recommend based on your home and budget.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">Alexa, Google, or Lutron — which should I pick?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-2" role="region"><p>Lutron Caséta/RA3 is the most reliable for whole-home dimming and doesn't depend on Wi-Fi to function locally. Alexa/Google smart switches are more budget-friendly and great for single rooms. We'll recommend based on your home and budget.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Can you retrofit this into a house that's already finished?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes — most of our smart lighting work is retrofit. No drywall damage in the vast majority of cases since we work through existing switch boxes.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">Can you retrofit this into a house that's already finished?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-3" role="region"><p>Yes — most of our smart lighting work is retrofit. No drywall damage in the vast majority of cases since we work through existing switch boxes.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">How long does a whole-home install take?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>A single-room smart switch swap takes under an hour. A whole-home Lutron system is typically a full day depending on room count.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">How long does a whole-home install take?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-4" role="region"><p>A single-room smart switch swap takes under an hour. A whole-home Lutron system is typically a full day depending on room count.</p></div>
     </div>
   </div>
 </section>
@@ -170,18 +171,18 @@
     <div class="footer-col">
       <h5>visit</h5>
       <span>Chicago, IL</span>
-      <span>Lic. # IL-EC-00000</span>
+      <span>Licensed &middot; Bonded &middot; Insured</span>
     </div>
     <div class="footer-col">
-      <h5>legal</h5>
-      <a href="../index.html">Privacy</a>
-      <a href="../index.html">Terms</a>
-      <a href="../index.html">Accessibility</a>
+      <h5>service</h5>
+      <a href="../services/ev-charger-installation.html">EV chargers</a>
+      <a href="../services/panel-upgrades.html">Panel upgrades</a>
+      <a href="../faq.html">FAQ</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Proper Electric. All rights reserved.</span>
-    <span>Licensed · Bonded · Insured · IL-EC-00000 · Chicago, IL</span>
+    <span>Licensed · Bonded · Insured · Chicago, IL</span>
   </div>
 </footer>
 <script src="../script.js"></script>

@@ -1,0 +1,4 @@
+render/*.png
+render/*.blend*
+Claude outputs/
+.DS_Store

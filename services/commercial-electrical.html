@@ -48,6 +48,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <div class="grain"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 <header class="nav" id="nav">
@@ -68,7 +69,7 @@
       <a href="tel:8477444625" class="btn-ghost"><span class="ico">☎</span> call</a>
       <a href="../index.html#contact" class="btn-solid">get quote</a>
     </div>
-    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-mobile" id="navMobile">
     <a href="../index.html#services">services</a>
@@ -84,7 +85,7 @@
 <section class="section" id="top" style="padding-top:180px;">
   <div class="section-head reveal-up">
     <p class="kicker">commercial</p>
-    <h2>commercial<br>electrical.</h2>
+    <h1 class="page-title">commercial<br>electrical.</h1>
     <p class="section-desc">Restaurants, retail, and office build-outs — code-compliant electrical work that passes inspection the first time, scheduled around your business hours.</p>
     <div class="hero-cta" style="margin-top:32px;">
       <a href="../index.html#contact" class="btn-solid lg">get a quote <span class="arrow">→</span></a>
@@ -98,13 +99,13 @@
     <p class="kicker">what's included</p>
     <h2>every install,<br>done right.</h2>
   </div>
-  <ul class="area-tags reveal-up" style="display:block; columns:2; max-width:700px;">
-    <li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Tenant improvement / build-out electrical</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Restaurant & kitchen equipment circuits</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Retail and signage electrical (interior & exterior)</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Emergency and exit lighting (code-required)</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Panel and service sizing for commercial loads</li>
-<li style="padding:6px 0;"><span style="color:var(--gold);">✓</span>&nbsp; Off-hours scheduling to avoid disrupting business</li>
+  <ul class="check-list reveal-up">
+    <li>Tenant improvement / build-out electrical</li>
+<li>Restaurant & kitchen equipment circuits</li>
+<li>Retail and signage electrical (interior & exterior)</li>
+<li>Emergency and exit lighting (code-required)</li>
+<li>Panel and service sizing for commercial loads</li>
+<li>Off-hours scheduling to avoid disrupting business</li>
   </ul>
 </section>
 
@@ -122,20 +123,20 @@
   </div>
   <div class="faq-list reveal-up">
     <div class="faq-item">
-      <button class="faq-q">Can you work around our business hours?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes — most retail and restaurant electrical work we do is scheduled overnight or before/after business hours specifically to avoid disrupting operations.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">Can you work around our business hours?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-1" role="region"><p>Yes — most retail and restaurant electrical work we do is scheduled overnight or before/after business hours specifically to avoid disrupting operations.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Do you handle restaurant kitchen equipment circuits?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes — dedicated circuits for cooking equipment, walk-in coolers, and ventilation systems are a regular part of our commercial work.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">Do you handle restaurant kitchen equipment circuits?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-2" role="region"><p>Yes — dedicated circuits for cooking equipment, walk-in coolers, and ventilation systems are a regular part of our commercial work.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Do you work directly with our general contractor?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes, we regularly coordinate directly with GCs and architects on build-outs rather than needing the owner in the middle of every decision.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">Do you work directly with our general contractor?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-3" role="region"><p>Yes, we regularly coordinate directly with GCs and architects on build-outs rather than needing the owner in the middle of every decision.</p></div>
     </div>
 <div class="faq-item">
-      <button class="faq-q">Is emergency/exit lighting required?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes, in virtually every commercial occupancy — we handle code-required emergency and exit lighting as part of every commercial build-out.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">Is emergency/exit lighting required?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-4" role="region"><p>Yes, in virtually every commercial occupancy — we handle code-required emergency and exit lighting as part of every commercial build-out.</p></div>
     </div>
   </div>
 </section>
@@ -170,18 +171,18 @@
     <div class="footer-col">
       <h5>visit</h5>
       <span>Chicago, IL</span>
-      <span>Lic. # IL-EC-00000</span>
+      <span>Licensed &middot; Bonded &middot; Insured</span>
     </div>
     <div class="footer-col">
-      <h5>legal</h5>
-      <a href="../index.html">Privacy</a>
-      <a href="../index.html">Terms</a>
-      <a href="../index.html">Accessibility</a>
+      <h5>service</h5>
+      <a href="../services/ev-charger-installation.html">EV chargers</a>
+      <a href="../services/panel-upgrades.html">Panel upgrades</a>
+      <a href="../faq.html">FAQ</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Proper Electric. All rights reserved.</span>
-    <span>Licensed · Bonded · Insured · IL-EC-00000 · Chicago, IL</span>
+    <span>Licensed · Bonded · Insured · Chicago, IL</span>
   </div>
 </footer>
 <script src="../script.js"></script>

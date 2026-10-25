@@ -123,7 +123,7 @@
       "name": "Are you licensed and insured?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — fully licensed, bonded, and insured in Illinois (Lic. # IL-EC-00000), with every job permitted and inspected."
+        "text": "Yes — fully licensed, bonded, and insured in Illinois, with every job permitted and inspected."
       }
     }
   ]
@@ -132,6 +132,7 @@
 </head>
 <body>
 
+<a class="skip-link" href="#top">Skip to content</a>
 <div class="grain"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 
@@ -154,7 +155,7 @@
       <a href="tel:8477444625" class="btn-ghost"><span class="ico">☎</span> call</a>
       <a href="#contact" class="btn-solid">get quote</a>
     </div>
-    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-mobile" id="navMobile">
     <a href="#services">services</a>
@@ -204,8 +205,8 @@
         <rect x="1465" y="150" width="65" height="350"/>
         <rect x="1540" y="240" width="60" height="260"/>
       </g>
-      <rect x="725" y="40" width="80" height="460" fill="url(#skyFade)"/>
-      <polyline points="765,40 745,220 775,220 750,460" fill="none" stroke="#e5a930" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="1215" y="110" width="55" height="390" fill="url(#skyFade)"/>
+      <polyline class="bolt" points="1245,110 1225,280 1255,280 1230,500" fill="none" stroke="#e5a930" stroke-width="3" stroke-linejoin="round" opacity=".75"/>
     </svg>
     <div class="hero-glow"></div>
     <div class="hero-grid"></div>
@@ -329,19 +330,19 @@
       <span class="work-tag">EV install</span>
       <h4>ready for fast charging</h4>
     </div>
-    <div class="work-card reveal-up" style="--from:#1c2436; --to:#0a0a0a;">
+    <div class="work-card reveal-up" style="--from:#1c2436; --to:#0a0a0a; --glyph:'\25C8';">
       <span class="work-tag">smart home</span>
       <h4>whole house controlled by Alexa</h4>
     </div>
-    <div class="work-card reveal-up" style="--from:#2b1414; --to:#0a0a0a;">
+    <div class="work-card reveal-up" style="--from:#2b1414; --to:#0a0a0a; --glyph:'\25B2';">
       <span class="work-tag">commercial</span>
       <h4>powered up after dark</h4>
     </div>
-    <div class="work-card reveal-up" style="--from:#132a20; --to:#0a0a0a;">
+    <div class="work-card big reveal-up" style="--from:#132a20; --to:#0a0a0a; --glyph:'\25A3';">
       <span class="work-tag">panel upgrade</span>
       <h4>200A service, future-ready</h4>
     </div>
-    <div class="work-card big photo reveal-up" style="--photo:url('assets/work/exterior-holiday-lighting.jpg'); --pos:center 65%;">
+    <div class="work-card wide photo reveal-up" style="--photo:url('assets/work/exterior-holiday-lighting.jpg'); --pos:center 65%;">
       <span class="work-tag">landscape</span>
       <h4>the property comes alive</h4>
     </div>
@@ -359,35 +360,20 @@
     <button class="gallery-item" data-caption="Tesla Wall Connector installed in a Chicago garage">
       <img src="assets/work/ev-tesla-charger-01.jpg" alt="Tesla EV charger installed in a Chicago garage" loading="lazy" />
     </button>
-    <button class="gallery-item" data-caption="Govee color-changing recessed lighting install">
-      <img src="assets/gallery/govee-recessed-lighting.jpg" alt="Govee color-changing recessed lighting installed in a living room" loading="lazy" />
-    </button>
-    <button class="gallery-item" data-caption="Mercedes-Benz EV charger install">
-      <img src="assets/gallery/mercedes-ev-charger.jpg" alt="Mercedes-Benz EV charger installed in a garage" loading="lazy" />
-    </button>
-    <button class="gallery-item" data-caption="New ceiling fan with HDMI & Ethernet hookup">
-      <img src="assets/gallery/ceiling-fan-install.jpg" alt="New ceiling fan with integrated light and HDMI/Ethernet hookup" loading="lazy" />
-    </button>
-    <button class="gallery-item" data-caption="Rooftop holiday lighting, lit up at night">
-      <img src="assets/work/exterior-holiday-lighting.jpg" alt="Rooftop holiday lighting installation lit up at night" loading="lazy" />
-    </button>
     <button class="gallery-item" data-caption="Tesla Wall Connector, cable coiled and mounted">
       <img src="assets/work/ev-tesla-charger-02.jpg" alt="Tesla Wall Connector with coiled charging cable in a garage" loading="lazy" />
     </button>
-    <button class="gallery-item" data-caption="Backup power unit, exterior wall mount">
-      <img src="assets/gallery/backup-power-unit.jpg" alt="Backup power unit mounted on an exterior brick wall" loading="lazy" />
-    </button>
-    <button class="gallery-item" data-caption="Media room lighting & TV install">
-      <img src="assets/gallery/media-room.jpg" alt="Media room with ambient lighting and mounted TV" loading="lazy" />
-    </button>
     <button class="gallery-item" data-caption="Finished Tesla charger install">
       <img src="assets/work/ev-tesla-charger-03.jpg" alt="Finished Tesla charger installation near a garage window" loading="lazy" />
+    </button>
+    <button class="gallery-item" data-caption="Rooftop holiday lighting, lit up at night">
+      <img src="assets/work/exterior-holiday-lighting.jpg" alt="Rooftop holiday lighting installation lit up at night" loading="lazy" />
     </button>
   </div>
 </section>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
   <img src="" alt="" id="lightboxImg" />
   <p class="lightbox-caption" id="lightboxCaption"></p>
@@ -426,6 +412,8 @@
       <blockquote class="t-card"><p>Best electrical work we&rsquo;ve ever had. Clean, fast, and the smart lighting is incredible.</p><cite>Sarah M. · Lincoln Park</cite></blockquote>
       <blockquote class="t-card"><p>Installed our Tesla charger in a single morning. Walked us through every rebate.</p><cite>Marcus T. · Evanston</cite></blockquote>
       <blockquote class="t-card"><p>Panel upgrade + whole-home Lutron. The crew treated our house like their own.</p><cite>Priya R. · Hinsdale</cite></blockquote>
+      <blockquote class="t-card"><p>Honest pricing, no upsells, on time. Can&rsquo;t recommend Proper Electric enough.</p><cite>Dan &amp; Kate L. · Oak Park</cite></blockquote>
+      <blockquote class="t-card"><p>Our restaurant build-out was permit-perfect and on schedule. Pros all the way.</p><cite>Theo K. · West Loop</cite></blockquote>
     </div>
   </div>
 </section>
@@ -480,20 +468,20 @@
   </div>
   <div class="faq-list reveal-up">
     <div class="faq-item">
-      <button class="faq-q">how much does EV charger installation cost in Chicago?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Most Level 2 installs run $600–$1,800 depending on panel capacity and run length — we give you an exact number on-site, free, before any work starts.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">how much does EV charger installation cost in Chicago?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-1" role="region"><p>Most Level 2 installs run $600–$1,800 depending on panel capacity and run length — we give you an exact number on-site, free, before any work starts.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">do I qualify for rebates in Illinois?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Most homeowners qualify for at least one of the federal, state, or ComEd programs. We check your eligibility as part of every quote.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">do I qualify for rebates in Illinois?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-2" role="region"><p>Most homeowners qualify for at least one of the federal, state, or ComEd programs. We check your eligibility as part of every quote.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">how long does installation take?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>A standard EV charger or lighting install is typically done in a single visit. Panel upgrades and whole-home rewires are scheduled and scoped up front.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">how long does installation take?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-3" role="region"><p>A standard EV charger or lighting install is typically done in a single visit. Panel upgrades and whole-home rewires are scheduled and scoped up front.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">are you licensed and insured?<span class="faq-plus">+</span></button>
-      <div class="faq-a"><p>Yes — fully licensed, bonded, and insured in Illinois (Lic. # IL-EC-00000), with every job permitted and inspected.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">are you licensed and insured?<span class="faq-plus">+</span></button>
+      <div class="faq-a" id="faq-a-4" role="region"><p>Yes — fully licensed, bonded, and insured in Illinois, with every job permitted and inspected.</p></div>
     </div>
   </div>
 </section>
@@ -510,11 +498,17 @@
       <span>mon–sat · 7am–7pm · 24/7 emergency</span>
     </div>
   </div>
-  <form class="contact-form reveal-up" id="quoteForm">
-    <input type="text" placeholder="your name" required name="name" />
-    <input type="tel" placeholder="phone number" required name="phone" />
-    <input type="text" placeholder="street address, city, zip" required name="address" />
-    <select name="service" required>
+  <form class="contact-form reveal-up" id="quoteForm" novalidate>
+    <label class="vh" for="qf-name">Your name</label>
+    <input id="qf-name" type="text" placeholder="your name" required name="name" autocomplete="name" />
+    <label class="vh" for="qf-phone">Phone number</label>
+    <input id="qf-phone" type="tel" placeholder="phone number" required name="phone" autocomplete="tel" />
+    <label class="vh" for="qf-email">Email address</label>
+    <input id="qf-email" type="email" placeholder="email address" required name="email" autocomplete="email" />
+    <label class="vh" for="qf-address">Street address, city, zip</label>
+    <input id="qf-address" type="text" placeholder="street address, city, zip" required name="address" autocomplete="street-address" />
+    <label class="vh" for="qf-service">Service needed</label>
+    <select id="qf-service" name="service" required>
       <option value="" disabled selected>service needed</option>
       <option>EV Charger Installation</option>
       <option>Smart Home Lighting</option>
@@ -528,7 +522,7 @@
       <button type="submit" class="btn-solid lg">get a quote</button>
       <a href="tel:8477444625" class="btn-outline lg"><span class="ico">☎</span> call now</a>
     </div>
-    <p class="form-note" id="formNote"></p>
+    <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
   </form>
 </section>
 
@@ -554,18 +548,18 @@
     <div class="footer-col">
       <h5>visit</h5>
       <span>Chicago, IL</span>
-      <span>Lic. # IL-EC-00000</span>
+      <span>Licensed &middot; Bonded &middot; Insured</span>
     </div>
     <div class="footer-col">
-      <h5>legal</h5>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Accessibility</a>
+      <h5>service</h5>
+      <a href="services/ev-charger-installation.html">EV chargers</a>
+      <a href="services/panel-upgrades.html">Panel upgrades</a>
+      <a href="faq.html">FAQ</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Proper Electric. All rights reserved.</span>
-    <span>Licensed · Bonded · Insured · IL-EC-00000 · Chicago, IL</span>
+    <span>Licensed · Bonded · Insured · Chicago, IL</span>
   </div>
 </footer>
 
